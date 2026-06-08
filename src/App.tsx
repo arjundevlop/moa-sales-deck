@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { OpportunityProvider } from "@/content/OpportunityContext";
 import { NavRail } from "@/components/deck/NavRail";
 import { Hero } from "@/components/deck/Hero";
@@ -12,28 +11,7 @@ import { EventsSection } from "@/components/deck/EventsSection";
 import { EcosystemExplorer } from "@/components/deck/EcosystemExplorer";
 import { ClosingSection } from "@/components/deck/ClosingSection";
 
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Mall of America — Interactive Sales Experience" },
-      {
-        name: "description",
-        content:
-          "An immersive, interactive sales deck for Mall of America. Explore leasing, sponsorship, and event opportunities at North America's #1 retail destination.",
-      },
-      { property: "og:title", content: "Mall of America — Interactive Sales Experience" },
-      {
-        property: "og:description",
-        content:
-          "Reach 40M+ annual visitors. Explore retail leasing, brand partnerships, and event hosting at Mall of America.",
-      },
-      { property: "og:type", content: "website" },
-    ],
-  }),
-  component: Index,
-});
-
-function Index() {
+export default function App() {
   return (
     <OpportunityProvider>
       <NavRail />
